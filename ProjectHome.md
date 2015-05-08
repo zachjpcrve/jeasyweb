@@ -1,0 +1,1 @@
+This project has been making to build java web applications. The project is based in spring framework 3.2, struts2 and hibernate 3. The project has for default the security module (users, profiles, parameters).
