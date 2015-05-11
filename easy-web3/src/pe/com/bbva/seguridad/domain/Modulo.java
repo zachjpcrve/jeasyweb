@@ -22,7 +22,7 @@ import pe.com.bbva.util.Constantes;
  *
  */
 @Entity
-@Table(name="TEWTEST_MODULO",schema="EWTEST")
+@Table(name="TMONAPP_MODULO",schema="MONAPP")
 @NamedQueries({
 @NamedQuery(name="listaPadres", 
 			query = " from Modulo where tipoModulo.id in ("+
@@ -33,7 +33,7 @@ import pe.com.bbva.util.Constantes;
 @SequenceGenerator(name="SEQ_MODULO",
 				   initialValue=1,
 				   allocationSize=1,
-				   sequenceName="EWTEST.SEQ_MODULO")
+				   sequenceName="MONAPP.SEQ_MODULO")
 public class Modulo extends EntidadBase{
 
 	

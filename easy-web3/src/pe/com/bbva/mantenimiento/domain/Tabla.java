@@ -18,7 +18,7 @@ import pe.com.bbva.core.domain.EntidadBase;
 import pe.com.bbva.util.Constantes;
 
 @Entity
-@Table(name="TEWTEST_TABLA_DE_TABLA",schema="EWTEST")
+@Table(name="TMONAPP_TABLA_DE_TABLA",schema="MONAPP")
 @NamedQueries({
 @NamedQuery(name="listaDetalleTabla", 
 			query = " from Tabla  where padre.id = ? and estado='"+Constantes.VAL_ACTIVO+"' order by padre.id"),
@@ -38,7 +38,7 @@ import pe.com.bbva.util.Constantes;
 			query = " select o from Tabla o where o.id = ?")					
 })
 @SequenceGenerator(name = "SEQ_TABLA_TABLA", 
-				   sequenceName = "EWTEST.SEQ_TABLA_TABLA", 
+				   sequenceName = "MONAPP.SEQ_TABLA_TABLA", 
 				   allocationSize = 1, 
 				   initialValue = 1) 
 				 

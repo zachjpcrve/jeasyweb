@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import pe.com.bbva.core.domain.EntidadBase;
 
 @Entity
-@Table(name="TEWTEST_PARAMETRO",schema="EWTEST")
+@Table(name="TMONAPP_PARAMETRO",schema="MONAPP")
 @NamedQueries({
 @NamedQuery(name="obtieneParametroPorCodigo", 
 			query = " select o from Parametro o where o.codigo = ?"),
@@ -22,7 +22,7 @@ import pe.com.bbva.core.domain.EntidadBase;
 @NamedQuery(name="obtieneParametroPorId", 
 					query = " select o from Parametro o where o.id = ?")					
 })
-@SequenceGenerator(name = "SEQ_PARAMETRO", sequenceName = "EWTEST.SEQ_PARAMETRO", allocationSize = 1, initialValue = 1)
+@SequenceGenerator(name = "SEQ_PARAMETRO", sequenceName = "MONAPP.SEQ_PARAMETRO", allocationSize = 1, initialValue = 1)
 public class Parametro extends EntidadBase
 {
 

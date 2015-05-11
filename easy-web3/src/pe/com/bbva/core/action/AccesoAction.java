@@ -67,7 +67,7 @@ public class AccesoAction extends GenericAction{
 		
 		  
 		logger.info("INICIO execute");
-		logger.info("incio servlet");
+		logger.info("inicio servlet");
 		ServiciosSeguridadBbva ssBbva; 
 		String codigoUsuario = ""; 
 		String codigoCargo = "";

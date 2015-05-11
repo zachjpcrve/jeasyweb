@@ -22,7 +22,7 @@ import pe.com.bbva.core.domain.EntidadBase;
 import pe.com.bbva.util.Constantes;
 
 @Entity
-@Table(name="TEWTEST_PERFIL",schema="EWTEST")
+@Table(name="TMONAPP_PERFIL",schema="MONAPP")
 @NamedQueries({
 @NamedQuery(name="listaPerfilesActivos", 
 			query = " from Perfil where estado='1' order by codigo"),				
@@ -30,7 +30,7 @@ import pe.com.bbva.util.Constantes;
 @SequenceGenerator(name="SEQ_PERFIL",
 				   initialValue=1,
 				   allocationSize=1,
-				   sequenceName="EWTEST.SEQ_PERFIL")
+				   sequenceName="MONAPP.SEQ_PERFIL")
 public class Perfil extends EntidadBase {
 
 	/**
@@ -71,7 +71,7 @@ public class Perfil extends EntidadBase {
 		this.id = id;
 	}
 	
-	@Column(name="CODIGO_PEFIL", length=6)
+	@Column(name="CODIGO_PERFIL", length=6)
 	public String getCodigo() {
 		return codigo;
 	}
@@ -95,7 +95,7 @@ public class Perfil extends EntidadBase {
 			fetch=FetchType.LAZY
 	)
 	@JoinTable(
-			name = "EWTEST.TEWTEST_PERFIL_MODULO",
+			name = "MONAPP.TMONAPP_PERFIL_MODULO",
 			joinColumns =@JoinColumn(name="ID_PERFIL") ,
 			inverseJoinColumns = @JoinColumn(name = "ID_MODULO")
 	)
@@ -106,7 +106,4 @@ public class Perfil extends EntidadBase {
 	public void setModulos(List<Modulo> modulos) {
 		this.modulos = modulos;
 	}
-
-
-	
 }

@@ -18,10 +18,10 @@ import javax.persistence.Table;
 import pe.com.bbva.core.domain.EntidadBase;
 
 @Entity
-@Table(name="TEWTEST_USUARIO",schema="EWTEST")
+@Table(name="TMONAPP_USUARIO",schema="MONAPP")
 @SequenceGenerator(allocationSize=1, 
 				   initialValue=1, 
-				   sequenceName="EWTEST.SEQ_USUARIO",
+				   sequenceName="MONAPP.SEQ_USUARIO",
 				   name="SEQ_USUARIO")
 public class Usuario extends EntidadBase{
 
@@ -84,7 +84,7 @@ public class Usuario extends EntidadBase{
 			fetch=FetchType.LAZY
 	)
 	@JoinTable(
-			name = "EWTEST.TEWTEST_USUARIO_PERFIL",
+			name = "MONAPP.TMONAPP_USUARIO_PERFIL",
 			joinColumns =@JoinColumn(name="ID_USUARIO") ,
 			inverseJoinColumns = @JoinColumn(name = "ID_PERFIL")
 	)
@@ -95,6 +95,4 @@ public class Usuario extends EntidadBase{
 	public void setPerfiles(List<Perfil> perfiles) {
 		this.perfiles = perfiles;
 	}
-
-
 }
